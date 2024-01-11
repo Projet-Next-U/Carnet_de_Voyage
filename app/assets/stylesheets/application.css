@@ -1,0 +1,93 @@
+/* app/assets/stylesheets/custom_styles.css */
+
+/* Reset des styles de base */
+body, h1, h2, h3, p, ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff; /* Couleur de fond*/
+  color: #000; /* Couleur de texte principale */
+}
+
+/* En-têtes */
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #003087;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #003087;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #003087;
+}
+
+/* Liens */
+a {
+  color: #003087;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Tableaux */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid #003087;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #003087;
+  color: #fff;
+}
+
+/* Formulaires */
+.field {
+  margin-bottom: 15px;
+}
+
+.field label {
+  display: block;
+  font-weight: bold;
+  color: #003087;
+}
+
+.field input[type="text"],
+.field textarea,
+.field select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.field input[type="submit"] {
+  background-color: #003087;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.field input[type="submit"]:hover {
+  background-color: #002366;
+}

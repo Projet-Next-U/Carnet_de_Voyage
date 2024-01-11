@@ -1,0 +1,34 @@
+<h1>Modifier le Voyage</h1>
+
+<%= form_with(model: @trip, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :destination %>
+    <%= form.text_field :destination %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_debut %>
+    <%= form.date_field :date_debut %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_fin %>
+    <%= form.date_field :date_fin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.collection_select(:user_id, User.all, :id, :nom, prompt: 'Choisir un utilisateur') %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Modifier le Voyage' %>
+  </div>
+<% end %>
+
+<%= link_to 'Retour à la liste', trips_path %>

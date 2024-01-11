@@ -1,0 +1,12 @@
+<h1>Confirmation de Suppression</h1>
+
+<p>Êtes-vous sûr de vouloir supprimer ce voyage ?</p>
+
+<p><strong>Destination :</strong> <%= @trip.destination %></p>
+<p><strong>Description :</strong> <%= @trip.description %></p>
+<p><strong>Date de Début :</strong> <%= @trip.date_debut.strftime("%d/%m/%Y") if @trip.date_debut %></p>
+<p><strong>Date de Fin :</strong> <%= @trip.date_fin.strftime("%d/%m/%Y") if @trip.date_fin %></p>
+<p><strong>Utilisateur :</strong> <%= @trip.user.nom if @trip.user %></p>
+
+<%= link_to 'Annuler', trips_path %> |
+<%= link_to 'Confirmer la Suppression', @trip, method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %>

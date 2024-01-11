@@ -1,0 +1,13 @@
+<!-- app/views/trips/show.html.erb -->
+
+<h1>Détails du Voyage</h1>
+
+<p><strong>Destination :</strong> <%= @trip.destination %></p>
+<p><strong>Description :</strong> <%= @trip.description %></p>
+<p><strong>Date de Début :</strong> <%= @trip.date_debut.strftime("%d/%m/%Y") if @trip.date_debut %></p>
+<p><strong>Date de Fin :</strong> <%= @trip.date_fin.strftime("%d/%m/%Y") if @trip.date_fin %></p>
+<p><strong>Utilisateur :</strong> <%= @trip.user.nom if @trip.user %></p>
+
+<%= link_to 'Modifier', edit_trip_path(@trip) %> |
+<%= link_to 'Supprimer', @trip, method: :delete, data: { confirm: 'Êtes-vous sûr de vouloir supprimer ce voyage ?' } %> |
+<%= link_to 'Retour à la liste des voyages', trips_path %>
